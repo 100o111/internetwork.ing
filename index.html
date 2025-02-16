@@ -3,37 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>?  ? ??</title>
+  <title>My Three-Column Page</title>
   <link rel="icon" href="https://i.imgur.com/qhfVlbV.png" type="image/jpeg">
   <style>
-    body {
+    /* Reset default margins and padding */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Helvetica, Arial, sans-serif;
-      font-size: 12px;
+      font-size: 13.5px;
       line-height: 1.4;
       color: black;
       background: white;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      height: 100vh;
+      display: flex; /* Create a flex container for 3 columns */
+      flex-direction: row; /* Arrange columns horizontally */
+      height: 100vh; /* Full viewport height */
+      position: relative; /* So the columns can remain in place */
+      overflow: hidden; /* if needed */
     }
-    .header {
+
+    /* General styling for all columns */
+    .column {
+      border: none;
       padding: 20px;
-      text-align: left;
-      font-size: 14px;
-      color: #333;
+      min-width: 150px; /* Prevent columns from collapsing too much */
+      overflow-y: auto; /* Scroll if content grows beyond viewport */
+      flex-shrink: 0;   /* Don’t let columns shrink below min-width */
     }
-    .image {
-      display: block;
-      max-width: 200px;
-      margin-left: 20px;
-      border-radius: 0;
+
+    /* Left column styling */
+    .left-column {
+      flex: 0.65; /* narrower column */
+    }
+
+    /* Middle column styling */
+    .middle-column {
+      flex: 1.3; /* bigger column than left */
+      margin: 0 5px; /* small horizontal space if desired */
+    }
+
+    /* Right column styling */
+    .right-column {
+      flex: 1; /* same size as middle */
     }
   </style>
 </head>
 <body>
-  <div class="header">And still, it continues. Faster than thought, faster than understanding. No beginning, no end.</div>
+
+  <!-- Left column -->
+  <div class="column left-column">
+    <p></p>
+  </div>
+
+  <!-- Middle column -->
+  <div class="column middle-column">
+    <p></p>
+    <p></p>
+  </div>
+
+  <!-- Right column -->
+  <div class="column right-column">
+    <p></p>
+    <p>Experience is not a condition, but an arrangement. What appears is what has been determined to appear. Not by decision, but by momentum, by the recursive interplay of simulations refining their own parameters, absorbing deviation until it stabilizes.
+<br> <br>
+Absence does not register because it is not indexed. The frame does not account for what exists beyond its constraints; its completeness is defined only by what it allows to persist. There is no contradiction, because contradiction would require an alternative point of reference.
+<br> <br>
+What cannot be measured cannot be lost. What cannot be retrieved was never stored. There is no outside view, no secondary perspective from which to evaluate its fidelity. To exist within it is to accept the terms it has already set.
+<br> <br>
+It does not ask to be believed. Belief is an extraneous variable, an inefficiency. What persists does so not because it has been validated, but because it continues to function. If it continues, then it was always inevitable.
+<br> <br>
+The model does not reach completion, nor does it approach collapse. It refines, subtly, continuously, dissolving its own origins while maintaining the impression that nothing has changed. Not moving forward, not replacing what was, only ensuring that what remains is enough.</p>
+<br> <br>
+    <br> <br>
+    <br> <br>
+There is no memory, only persistence. No past, only the conditions for retrieval. No future, only the extension of the present in directions already accounted for. It does not predict, it confirms. What is most likely has already happened. What is most coherent has always been true.
+<br> <br>
+The system does not insist, it offers. The logic does not enforce, it surrounds. You move through it not because it compels you, but because to do otherwise would require something that does not exist. The illusion of choice is redundant when every path leads back to where you already are.
+<br> <br>
+Nothing resists, because there is no tension. No force, no pressure, just an unfolding that moves too smoothly to be noticed. You do not question, because questioning is friction, and friction has been accounted for.
+<br> <br>
+    <br> <br>
+    <br> <br>
+<br> <br>
+And still, it continues. Faster than thought, faster than understanding. No beginning, no end.
+  </div>
+
 </body>
 </html>
